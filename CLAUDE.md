@@ -212,7 +212,7 @@ Piezas: `MeshStandardMaterial` roughness=0.3 metalness=0.1, `castShadow`.
 4. **[Done]** Escena 3D — Tablero (`GameScene.tsx`, `Board3D.tsx`, `Square3D.tsx`)
 5. **[Done]** Escena 3D — Piezas (geometría procedural Three.js en `Piece3D.tsx`, `PieceSet.tsx` — sin GLB externos)
 6. **[Done]** Interactividad — selección y movimientos (`MoveHighlight.tsx`, `PromotionDialog.tsx`)
-7. Modo local completo + HUD (`GameHUD.tsx`, `GameResult.tsx`, `CapturedPieces.tsx`)
+7. **[Done]** Modo local completo + HUD (`GameHUD.tsx`, `GameResult.tsx`, `CapturedPieces.tsx`)
 8. IA minimax en Web Worker (`ai/evaluate.ts`, `ai/minimax.ts`, `workers/ai.worker.ts`)
 9. Animaciones de piezas (@react-spring/three)
 10. Supabase setup (SQL migrations, client, RLS)

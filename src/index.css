@@ -32,3 +32,33 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+
+.btn-hud {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 200ms ease, color 200ms ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary-hud {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: transparent;
+}
+.btn-primary-hud:hover {
+  background: var(--primary);
+  color: #0A0A0F;
+}
+
+.btn-danger-hud {
+  color: var(--destructive);
+  border-color: var(--destructive);
+  background: transparent;
+}
+.btn-danger-hud:hover {
+  background: var(--destructive);
+  color: #fff;
+}

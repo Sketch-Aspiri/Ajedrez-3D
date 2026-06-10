@@ -1,12 +1,9 @@
 import { useEffect } from 'react'
 import { GameScene } from '@/components/game/GameScene'
 import { PromotionDialog } from '@/components/game/PromotionDialog'
+import { GameHUD } from '@/components/game/GameHUD'
 import { useGameStore } from '@/stores/gameStore'
 
-/**
- * Harness mínimo: arranca una partida local y monta la escena 3D.
- * El routing (Home/Lobby/Profile) y el HUD llegan en los steps 7+.
- */
 export default function App() {
   const startGame = useGameStore((state) => state.startGame)
 
@@ -15,9 +12,27 @@ export default function App() {
   }, [startGame])
 
   return (
-    <div className="relative h-screen w-screen">
+    <div className="relative h-screen w-screen overflow-hidden">
       <GameScene />
       <PromotionDialog />
+      <GameHUD />
+      <div
+        style={{
+          position: 'absolute',
+          top: '12px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          color: 'rgba(232, 232, 240, 0.25)',
+          fontSize: '11px',
+          fontFamily: 'Inter, sans-serif',
+          letterSpacing: '0.08em',
+          userSelect: 'none',
+          pointerEvents: 'none',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        hecho por Andrés Aspiri
+      </div>
     </div>
   )
 }
