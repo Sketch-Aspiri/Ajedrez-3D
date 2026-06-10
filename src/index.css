@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #0A0A0F;
+  --surface: #141420;
+  --surface-elevated: #1E1E2E;
+  --primary: #D4A853;
+  --primary-dark: #8B6914;
+  --text: #E8E8F0;
+  --muted: #6B6B80;
+  --success: #4CAF82;
+  --destructive: #E05555;
+  --piece-white: #F0E6D3;
+  --piece-black: #2A2035;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
