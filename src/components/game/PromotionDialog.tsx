@@ -31,16 +31,16 @@ export function PromotionDialog() {
       onClick={cancelPromotion}
     >
       <div
-        className="rounded-xl border border-[#1E1E2E] bg-[#141420]/90 p-6 backdrop-blur-md"
+        className="mx-4 rounded-xl border border-[#1E1E2E] bg-[#141420]/90 p-4 backdrop-blur-md sm:p-6"
         onClick={(event) => event.stopPropagation()}
       >
         <h2
-          className="mb-4 text-center text-lg font-semibold text-[#E8E8F0]"
+          className="mb-4 text-center text-base font-semibold text-[#E8E8F0] sm:text-lg"
           style={{ fontFamily: 'Cinzel, serif' }}
         >
           Elige tu pieza
         </h2>
-        <div className="flex gap-3">
+        <div className="flex justify-center gap-2 sm:gap-3">
           {PROMOTION_CHOICES.map(({ type, symbol, label }) => (
             <button
               key={type}
@@ -49,7 +49,7 @@ export function PromotionDialog() {
               onClick={() =>
                 makeMove(pendingPromotion.from, pendingPromotion.to, type)
               }
-              className="flex h-16 w-16 items-center justify-center rounded-lg border border-[#D4A853]/40 text-4xl text-[#D4A853] transition-colors duration-200 hover:bg-[#D4A853]/15"
+              className="flex h-14 w-14 items-center justify-center rounded-lg border border-[#D4A853]/40 text-3xl text-[#D4A853] transition-colors duration-200 hover:bg-[#D4A853]/15 sm:h-16 sm:w-16 sm:text-4xl"
             >
               {symbol}
             </button>

@@ -29,11 +29,11 @@ export function GameResult() {
     <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 20 }}>
       <div className="absolute inset-0 bg-black/60" style={{ backdropFilter: 'blur(4px)' }} />
       <div
-        className="relative flex flex-col items-center gap-4 p-8 rounded-2xl"
+        className="relative mx-4 flex flex-col items-center gap-4 rounded-2xl p-6 sm:p-8"
         style={{
           background: 'var(--surface)',
           border: '1px solid var(--surface-elevated)',
-          minWidth: 260,
+          width: 'min(320px, calc(100vw - 2rem))',
           zIndex: 21,
         }}
       >

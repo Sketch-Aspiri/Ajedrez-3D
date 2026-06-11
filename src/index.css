@@ -19,18 +19,29 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  height: 100%;
   background: var(--background);
   color: var(--text);
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Evita scroll elástico / pull-to-refresh sobre el tablero en móvil. */
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
 }
 
 #root {
   width: 100%;
-  min-height: 100vh;
+  /* Dynamic viewport height: respeta la barra de URL móvil que aparece/oculta. */
+  height: 100dvh;
+}
+
+/* La escena 3D maneja sus propios gestos; sin scroll/zoom del navegador encima. */
+.game-canvas {
+  touch-action: none;
 }
 
 .btn-hud {
